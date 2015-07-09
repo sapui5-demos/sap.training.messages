@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		
+	    <title>Demo Messages</title>
+	    
+		<script 
+	            id="sap-ui-bootstrap"
+	            src="resources/sap-ui-core.js"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-bindingSyntax="complex"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-resourceroots='{"sap.training.messages" : "./"  }'>
+		</script>
+
+    	<script>
+            sap.ui.getCore().attachInit(function() {
+    		    new sap.m.Shell({
+    		            app: new sap.ui.core.ComponentContainer({
+                                    name : "sap.training.messages",
+                                    height : "100%"//,
+                                    //handleValidation: true
+                                })
+    		        }).placeAt("content");
+    		});
+    	</script>
+			
+	</head>
+	<body class="sapUiBody" id="content">
+	</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "run": [
+    {
+      "filePath": "/sap.training.messages/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 6587770,
+        "displayName": "New Web Application 3"
+      }
+    },
+    {
+      "filePath": "/sap.training.messages/Component.js",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "_metadata": {
+        "runnerId": "fiorirunner",
+        "id": 2396708,
+        "displayName": "New SAP Fiori Component on Sandbox"
+      }
+    }
+  ]
+}
