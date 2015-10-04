@@ -3,29 +3,23 @@ sap.ui.controller("sap.training.messages.view.Main", {
 	onInit: function() {
 
 		var oMsgTypes = {
-			"msgTypes": [
-				{
-					"key": "Error",
-					"text": "Error"
-				},
-				{
-					"key": "Information",
-					"text": "Information"
-				},
-				{
-					"key": "None",
-					"text": "None"
-				},
-				{
-					"key": "Success",
-					"text": "Success"
-				},
-				{
-					"key": "Warning",
-					"text": "Warning"
-				},
-	          ]
-		}
+			"msgTypes": [{
+				"key": "Error",
+				"text": "Error"
+			}, {
+				"key": "Information",
+				"text": "Information"
+			}, {
+				"key": "None",
+				"text": "None"
+			}, {
+				"key": "Success",
+				"text": "Success"
+			}, {
+				"key": "Warning",
+				"text": "Warning"
+			}]
+		};
 
 		var oView = this.getView();
 
@@ -36,7 +30,7 @@ sap.ui.controller("sap.training.messages.view.Main", {
 		//sap.ui.getCore().getMessageManager().registerObject(oInput, true);
 	},
 
-	onCreateUIMessage: function(oEvent) {
+	onCreateUIMessage: function() {
 
 		var oView = this.getView();
 		var oInputData = oView.getModel("input").getData();
@@ -45,7 +39,7 @@ sap.ui.controller("sap.training.messages.view.Main", {
 		var oMessageProcessor = new sap.ui.core.message.ControlMessageProcessor();
 		oMessageManager.registerMessageProcessor(oMessageProcessor);
 
-		var oNameInput = this.getView().byId("productNameInput")
+		var oNameInput = this.getView().byId("productNameInput");
 
 		var sTarget = oInputData.withTarget ? oNameInput.getId() + "/value" : "";
 
@@ -61,7 +55,7 @@ sap.ui.controller("sap.training.messages.view.Main", {
 		);
 	},
 
-	onCreateServerMessage: function(oEvent) {
+	onCreateServerMessage: function() {
 
 		var oComponent = this.getOwnerComponent();
 		var oProductModel = oComponent.getModel("product");
@@ -88,7 +82,7 @@ sap.ui.controller("sap.training.messages.view.Main", {
 		);
 	},
 
-	onDisplayMessages: function(oEvent) {
+	onDisplayMessages: function() {
 
 		var oMP = new sap.m.MessagePopover({
 			items: {
@@ -111,12 +105,12 @@ sap.ui.controller("sap.training.messages.view.Main", {
 
 	},
 
-	onRemoveMessages: function(oEvent) {
+	onRemoveMessages: function() {
 		var oMessageManager = sap.ui.getCore().getMessageManager();
 		oMessageManager.removeAllMessages();
 	},
 
-	onShowProduct: function(oEvent) {
+	onShowProduct: function() {
 
 		var oView = this.getView();
 		var oInputData = oView.getModel("input").getData();
